@@ -5,6 +5,7 @@ import { OrdersPage } from './Pages/OrdersPage';
 
 import './App.css'
 import { TrackingPage } from './Pages/TrackingPage';
+import { ErrorPage } from './Pages/ErrorPage';
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <Route path="/checkout" element={<CheckoutPage />} />
       <Route path="/orders" element={<OrdersPage />} />
       <Route path="/tracking" element={<TrackingPage />} />
+      <Route path="*" element={<ErrorPage />}/>
     </Routes>
     
   )
