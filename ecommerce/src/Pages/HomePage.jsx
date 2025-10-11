@@ -8,17 +8,13 @@ import { useEffect,useState } from 'react';
 export function HomePage() {
 
   const [products,setProducts]=useState([]);
-  const [cart,setCart]=useState([]);
+  
 
   useEffect(()=>{
     axios.get('/api/products')
     .then((response)=>{
       setProducts(response.data);
     });
-    axios.get('/api/cart-items')
-    .then((response)=>{
-      setCart(response.data);
-    })
   },[]);
 
   return (
@@ -43,7 +39,7 @@ export function HomePage() {
 
             <div className="product-rating-container">
               <img className="product-rating-stars"
-                src={`images/ratings/rating-{product.rating.stars*10}.png`} />
+                src={`images/ratings/rating-${product.rating.stars*10}.png`} />
               <div className="product-rating-count link-primary">
                 {product.rating.count}
               </div>
