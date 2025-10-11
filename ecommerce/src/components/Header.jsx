@@ -1,19 +1,19 @@
 import './Header.css';
-import { NavLink } from 'react-router';
+import {NavLink} from 'react-router';
 import CartIcon from '../assets/images/icons/cart-icon.png';
 import SearchIcon from '../assets/images/icons/search-icon.png';
 
 
-export function Header({ cart }) {
+export function Header({cart}){
 
-  let totalQuantity = 0;
-  cart.forEach((cartItem) => {
-    totalQuantity += cartItem.quantity;
+  let totalQuantity=0;
+  cart.forEach((cartItem)=>{
+    totalQuantity+=cartItem.quantity;
   });
 
 
-  return (
-    <div className="header">
+    return (
+        <div className="header">
       <div className="left-section">
         <NavLink to="/" className="header-link">
           <img className="logo"
@@ -43,6 +43,6 @@ export function Header({ cart }) {
           <div className="cart-text">Cart</div>
         </NavLink>
       </div>
-    </div>
-  );
+            </div>
+    );
 }
