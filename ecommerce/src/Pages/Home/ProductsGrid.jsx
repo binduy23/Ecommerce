@@ -1,30 +1,8 @@
-import axios from 'axios';
-import {Header} from '../components/Header.jsx';
-import './HomePage.css';
-import Checkmark from '../assets/images/icons/checkmark.png';
-import { formatMoney } from '../utils/Money.js';
+import { formatMoney } from "../../utils/Money";
+import Checkmark from '../../assets/images/icons/checkmark.png';
 
-import { useEffect,useState } from 'react';
-
-export function HomePage({cart}) {
-
-  const [products,setProducts]=useState([]);
-  
-
-  useEffect(()=>{
-    axios.get('/api/products')
-    .then((response)=>{
-      setProducts(response.data);
-    });
-  },[]);
-
-  return (
-    <>
-      <title>ecommerce</title>
-      <link rel="icon" type="image/svg+xml" href="home-favicon.png" />
-      <Header cart={cart}/>
-
-      <div className="home-page">
+export function ProductsGrid({products}){
+    return (
         <div className="products-grid">
           {products.map((product)=>{
             return(
@@ -78,7 +56,5 @@ export function HomePage({cart}) {
           </div>
           );})}
         </div>
-      </div>
-    </>
-  );
+    );
 }
