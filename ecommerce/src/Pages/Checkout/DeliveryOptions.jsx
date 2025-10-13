@@ -12,8 +12,9 @@ export function DeliveryOptions({ deliveryOptions ,cartItem }) {
                 if (deliveryOption.priceCents > 0) {
                     priceString = `${formatMoney(deliveryOption.priceCents)}-shipping`;
                 }
+                return(
                 <div key={deliveryOption.id} className="delivery-option">
-                    <input type="radio" checked={deliveryOption.id === cartItem.deliverOptionId}
+                    <input type="radio" checked={deliveryOption.id === cartItem.deliveryOptionId}
                         className="delivery-option-input"
                         name={`delivery-option-${cartItem.productId}`} />
                     <div>
@@ -24,7 +25,7 @@ export function DeliveryOptions({ deliveryOptions ,cartItem }) {
                             {priceString}
                         </div>
                     </div>
-                </div>
+                </div>);
             })}
         </div>
     );
