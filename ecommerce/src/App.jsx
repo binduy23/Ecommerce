@@ -8,7 +8,7 @@ import './App.css'
 import { TrackingPage } from './Pages/TrackingPage';
 import { ErrorPage } from './Pages/ErrorPage';
 
-
+window.axios=axios;
 
 function App() {
 
