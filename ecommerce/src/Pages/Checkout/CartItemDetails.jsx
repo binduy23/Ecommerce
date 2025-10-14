@@ -8,6 +8,13 @@ export function CartItemDetails({ cartItem,loadCart }) {
         await loadCart();
     });
 
+    const updateQuantity=(async()=>{
+        await axios.put(`/api/cart-items/${cartItem.productId}`,{
+            quantity:2
+        });
+        loadCart();
+    });
+
     return (
         <>
             <img className="product-image"
@@ -24,7 +31,7 @@ export function CartItemDetails({ cartItem,loadCart }) {
                     <span>
                         Quantity: <span className="quantity-label">{cartItem.quantity}</span>
                     </span>
-                    <span className="update-quantity-link link-primary">
+                    <span className="update-quantity-link link-primary" onClick={updateQuantity}>
                         Update
                     </span>
                     <span className="delete-quantity-link link-primary" onClick={deleteCartItem}>

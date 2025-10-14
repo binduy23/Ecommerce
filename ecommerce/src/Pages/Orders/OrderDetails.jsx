@@ -21,7 +21,7 @@ export function OrderDetails({order}){
                                     Arriving on: {dayjs(orderedProduct.product.estimatedDeliveryTimeMs).format('MMMM D')}
                                 </div>
                                 <div className="product-quantity">
-                                    Quantity: {orderedProduct.product.quantity}
+                                    Quantity: {orderedProduct.quantity}
                                 </div>
                                 <button className="buy-again-button button-primary">
                                     <img className="buy-again-icon" src={BuyAgainIcon} />
