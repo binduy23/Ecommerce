@@ -26,7 +26,7 @@ input, select, button {
 
 .button-primary {
   color: rgb(255, 255, 255);
-  background-color: rgb(25, 135, 84);
+  background-color: #127db3;
   border: 1px solid transparent;
   border-radius: 5px;
   cursor: pointer;
@@ -75,7 +75,7 @@ input, select, button {
 }
 
 .link-primary {
-  color: rgb(25, 135, 84);
+  color: #127db3;
   cursor: pointer;
 }
 

@@ -10,7 +10,7 @@ export function Header({cart}){
 
   
   const navigate=useNavigate();
-  const [searchParams]=useSearchParams;
+  const [searchParams]=useSearchParams();
   const searchText=searchParams.get('search');
   const [search,updateSearch]=useState(searchText || '');
   

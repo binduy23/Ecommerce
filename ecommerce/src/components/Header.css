@@ -1,5 +1,5 @@
 .header {
-  background-color: rgb(8, 79, 45);
+  background-color: #127db3;
   color: white;
   padding-left: 15px;
   padding-right: 15px;
@@ -81,7 +81,7 @@
 }
 
 .header .search-button {
-  background-color: rgb(186, 255, 190);
+  background-color: #66c9de;
   border: none;
   width: 45px;
   height: 40px;
